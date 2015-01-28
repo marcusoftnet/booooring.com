@@ -4,6 +4,36 @@
 	<div class="jumbotron">
 		<h1>Booring</h1>
 		<p class="lead">The famous Boooring call, for when you just had enough</p>
-		<p><a class="btn btn-lg btn-success" href="#" role="button">Boooring</a></p>
+		<p>
+			<audio id="booooring" src="/api/sound/booooring" preload="auto" autobuffer></audio>
+			<a class="btn btn-lg btn-success button_type_sound" data-soundname="booooring" onClick="EvalSound('booooring')" role="button">Boooring</a>
+		</p>
+	</div>
+
+	<div class="jumbotron">
+		<h1>Slave choir</h1>
+		<p class="lead">When it's just too much working</p>
+		<p>
+			<audio id="slaves" src="/api/sound/slaves" preload="auto" autobuffer></audio>
+			<a class="btn btn-lg btn-success button_type_sound" data-soundname="slaves" onClick="EvalSound('slaves')" role="button">Slave choir</a>
+		</p>
+	</div>
+
+	<div class="jumbotron">
+		<h1>Slow clapping</h1>
+		<p class="lead">When something is a little bit pretentious</p>
+		<p>
+			<audio id="slowclap" src="/api/sound/slowclap" preload="auto" autobuffer></audio>
+			<a class="btn btn-lg btn-success button_type_sound" data-soundname="slowclap" onClick="EvalSound('slowclap')" role="button">Slow clapping</a>
+		</p>
+	</div>
+
+	<div class="jumbotron">
+		<h1>So close</h1>
+		<p class="lead">When someone presented something that didn't really went down as planned</p>
+		<p>
+			<audio id="soclose" src="/api/sound/soclose" preload="auto" autobuffer></audio>
+			<a class="btn btn-lg btn-success button_type_sound" data-soundname="soclose" onClick="EvalSound('soclose')" role="button">So close</a>
+		</p>
 	</div>
 {% endblock %}

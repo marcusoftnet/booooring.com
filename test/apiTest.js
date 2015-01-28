@@ -4,7 +4,7 @@ var request = require('supertest').agent(app.listen());
 describe('API for streaming', function(){
   it('return existing files', function(done){
     request
-    .get('/api/sound/boooring')
+    .get('/api/sound/booooring')
     .expect(200, done);
   });
 
