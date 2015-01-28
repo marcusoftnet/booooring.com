@@ -1,8 +1,4 @@
+var render = require('../lib/render');
 
-module.exports.showHomePage = function *() {
-	this.body = "Home page!";
-};
-
-module.exports.showDisclaimerPage = function *() {
-	this.body = "Disclaimer page!";
-};
+module.exports.showHomePage = function *(){ this.body = yield render('home'); };
+module.exports.showDisclaimerPage = function *(){ this.body = yield render('disclaimer');};

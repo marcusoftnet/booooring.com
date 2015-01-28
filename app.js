@@ -1,5 +1,9 @@
 var app = module.exports = require("koa")();
 var route = require("koa-route");
+var serve = require('koa-static');
+
+// configuration of middleware
+app.use(serve(__dirname + '/public'));
 
 // routes
 var apihandler = require("./routes/routesApi.js");
