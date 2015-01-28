@@ -1,4 +1,3 @@
-
 var onFinished = require('finished');
 var fs = require('fs');
 var path = require('path');
