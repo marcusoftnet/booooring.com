@@ -1,0 +1,13 @@
+# Routes
+
+Views
+/ - shows the home page with buttons for the different sounds, first just booring.com
+/?autoplay=:name - plays the named sound on load
+/disclaimer - shows warning page
+
+# Api
+/api/sound/:name - streams the sound 
+
+Layout 
+
+Only one big button
