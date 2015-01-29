@@ -16,4 +16,6 @@ app.use(route.get("/disclaimer" , sitehandler.showDisclaimerPage));
 
 // start it
 app.listen(config.port);
-console.log('listening on port '+ config.port);
+console.log('The app is stared. Listening on port '+ config.port);
+console.log("This is the configuration we're running:")
+console.log(config)
