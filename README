@@ -1,13 +1,26 @@
-# Routes
+# What is it?
+The soundtrack for your meetings.
 
-Views
-/ - shows the home page with buttons for the different sounds, first just booring.com
-/?autoplay=:name - plays the named sound on load
-/disclaimer - shows warning page
+# Kanban
+## Todo
+- configure booring.com to point to boooring.herokuapp.com
+- /sound/:name - show only that sound. Accept and autoplay parameter
+-- Name
+-- Description
+-- File name
+-- Number of plays
+-- Tags
+- store the number of plays
+- possibility to add picture
+- layout so that more button fits
+- search
+- filter
 
-# Api
-/api/sound/:name - streams the sound 
+## Doing
+- buy booring.com
+- move the data, except the sounds, to a database
 
-Layout 
 
-Only one big button
+## Done
+- initial setup
+- Google Analytics
