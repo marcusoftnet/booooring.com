@@ -4,23 +4,21 @@ The soundtrack for your meetings.
 # Kanban
 ## Todo
 - configure booring.com to point to boooring.herokuapp.com
+
 - /sound/:name - show only that sound. Accept and autoplay parameter
--- Name
--- Description
--- File name
--- Number of plays
--- Tags
 - store the number of plays
-- possibility to add picture
+
 - layout so that more button fits
 - search
 - filter
 
+- possibility to add picture
+
 ## Doing
 - buy booring.com
-- move the data, except the sounds, to a database
-
+- Add tags to the data model
 
 ## Done
+- move the data, except the sounds, to a database
 - initial setup
 - Google Analytics
