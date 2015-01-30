@@ -6,19 +6,21 @@ The soundtrack for your meetings.
 - configure booring.com to point to boooring.herokuapp.com
 
 - /sound/:name - show only that sound. Accept and autoplay parameter
+
 - store the number of plays
 
-- layout so that more button fits
+
 - search
 - filter
+- Add tags to the data model
 
 - possibility to add picture
 
 ## Doing
 - buy booring.com
-- Add tags to the data model
 
 ## Done
+- new layout so that more button fits
 - move the data, except the sounds, to a database
 - initial setup
 - Google Analytics

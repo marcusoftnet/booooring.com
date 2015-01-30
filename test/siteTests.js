@@ -23,7 +23,7 @@ describe('The site for humans', function(){
         request
           .get('/')
           .expect(function (req) {
-            req.text.should.containEql("Boooring");
+            req.text.should.containEql("Booooring");
             req.text.should.containEql("Slave choir");
             req.text.should.containEql("Slow clapping");
             req.text.should.containEql("So close");

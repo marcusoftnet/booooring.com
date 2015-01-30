@@ -11,33 +11,32 @@
     <title>booooring.com - soundtrack for your meetings</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="./jumbotron-narrow.css" rel="stylesheet">
+    <link href="/css/jumbotron-narrow.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./ie-emulation-modes-warning.js"></script>
+    <script src="/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
   </head>
 
   <body>
 
     <div class="container">
-      <div class="header">
-        <h3 class="text-muted"><a href="/">booooring.com - soundtrack for your meetings</a></h3>
+
+      <div class="jumbotron">
+        <h1><a href="/">booooring.com</a></h1>
+        <p class="lead">the new soundtrack for your meetings</p>
       </div>
 
-      {% block content %}
-      <p>No content definied!</p>
-      {% endblock %}
+      {% block content %}<p>No content definied!</p>{% endblock %}
 
       <footer class="footer">
         <p>&copy; <a href="http://twitter.com/marcusoftnet" target="_blank">@marcusoftnet</a> 2015, <a href="/disclaimer">Disclaimer</a></p>
@@ -47,8 +46,8 @@
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="./ie10-viewport-bug-workaround.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/ie10-viewport-bug-workaround.js"></script>
     <script>
       function EvalSound(soundobj) {
         var thissound=document.getElementById(soundobj);
