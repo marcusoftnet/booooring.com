@@ -13,6 +13,7 @@
   "repository": "https://github.com/marcusoftnet/booooring.com",
   "bugs": "https://github.com/marcusoftnet/booooring.com/issues",
   "devDependencies": {
+    "co": "~3.1.0",
     "mocha": "~2.1.0",
     "supertest": "~0.15.0"
   },

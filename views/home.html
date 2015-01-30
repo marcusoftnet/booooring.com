@@ -1,15 +1,17 @@
 {% extends 'layout.html' %}
 
 {% block content %}
+	{% for sound in sounds %}
 	<div class="jumbotron">
-		<h1>Booring</h1>
-		<p class="lead">The famous Boooring call, for when you just had enough</p>
+		<h1>{{ sound.heading }}</h1>
+		<p class="lead">{{ sound.description }}</p>
 		<p>
-			<audio id="booooring" src="/api/sound/booooring" preload="auto" autobuffer></audio>
-			<a class="btn btn-lg btn-success button_type_sound" data-soundname="booooring" onClick="EvalSound('booooring')" role="button">Boooring</a>
+			<audio id="{{ sound.name }}" src="/api/sound/{{ sound.name }}" preload="auto" autobuffer></audio>
+			<a class="btn btn-lg btn-success button_type_sound" data-soundname="{{ sound.name }}" onClick="EvalSound('{{ sound.name }}')" role="button">{{ sound.heading }}</a>
 		</p>
 	</div>
-
+	{% endfor %}
+<!-- 
 	<div class="jumbotron">
 		<h1>Slave choir</h1>
 		<p class="lead">When it's just too much working</p>
@@ -35,5 +37,5 @@
 			<audio id="soclose" src="/api/sound/soclose" preload="auto" autobuffer></audio>
 			<a class="btn btn-lg btn-success button_type_sound" data-soundname="soclose" onClick="EvalSound('soclose')" role="button">So close</a>
 		</p>
-	</div>
+	</div> -->
 {% endblock %}
