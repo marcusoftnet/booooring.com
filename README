@@ -9,10 +9,9 @@ Soundtrack for your meetings.
 -- show links to tag per sound
 -- list all sounds per tag
 - possibility to add picture per sound
-- comments for the sound page, via disqus
+- comments on the sound page, via disqus
 
 ## Todo
-- store the number of plays per sound
 - show the number of plays each sound has been played
 - More sounds:
 -- Aaaah from Exalicbur
@@ -20,10 +19,12 @@ Soundtrack for your meetings.
 -- Yes!
 -- Noooooooooooooo
 -- Hammarbyklacken
+- Button to copy URL for autoplay to clipboard (ZeroClipboard)
 
 ## Doing
 - buy booring.com
 - configure booring.com to point to boooring.herokuapp.com
+- store the number of plays per sound
 
 
 ## Done
