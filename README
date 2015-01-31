@@ -1,5 +1,5 @@
 # What is it?
-Soundtrack for your meetings.
+The soundtrack for your office
 
 # Kanban
 ## Ideas, things I might add
@@ -13,10 +13,6 @@ Soundtrack for your meetings.
 - Button to copy URL for autoplay to clipboard (ZeroClipboard)
 
 ## Todo
-- Superslick layout - buy from someone
-- Ads on the page
-
-## Doing
 - buy booring.com
 - configure booring.com to point to boooring.herokuapp.com
 - More sounds:
@@ -25,6 +21,12 @@ Soundtrack for your meetings.
 -- Yes!
 -- Noooooooooooooo
 -- Hammarbyklacken
+
+- Superslick layout - buy from someone
+- Ads on the page
+
+## Doing
+- Add Makefile
 
 ## Done
 - show the number of plays each sound has been played
