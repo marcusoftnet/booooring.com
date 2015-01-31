@@ -7,7 +7,7 @@ describe('API for web pages', function(){
   describe('streams sounds', function(){
     it('return existing files', function(done){
       request
-      .get('/api/sound/booooring')
+      .get('/api/sound/' + testHelpers.testSoundName)
       .expect(200, done);
     });
 
@@ -28,11 +28,11 @@ describe('API for web pages', function(){
         testHelpers.seedDb();
 
         request
-          .post("/api/played/booooring")
+          .post("/api/played/" + testHelpers.testSoundName)
           .expect(200)
           .end(function (){
             co(function *() {
-              var sound = yield testHelpers.soundCollection.findOne({name : 'booooring'});
+              var sound = yield testHelpers.soundCollection.findOne({name :  testHelpers.testSoundName});
               sound.noOfPlays.should.equal(1);
             })(done);
           });
@@ -45,11 +45,11 @@ describe('API for web pages', function(){
 	    	yield testHelpers.soundCollection.insert({ name: 'booooring', noOfPlays : 12 })
 
         request
-          .post("/api/played/booooring")
+          .post("/api/played/" + testHelpers.testSoundName)
           .expect(200)
           .end(function (){
             co(function *() {
-              var sound = yield testHelpers.soundCollection.findOne({name : 'booooring'});
+              var sound = yield testHelpers.soundCollection.findOne({name : testHelpers.testSoundName});
               sound.noOfPlays.should.equal(13);
             })(done);
           });

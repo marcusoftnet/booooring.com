@@ -49,7 +49,7 @@ describe('The site for humans', function(){
         request
           .get('/')
           .expect(function (req) {
-            req.text.should.containEql("href='/sound/booooring'");
+            req.text.should.containEql("href='/sound/" + testHelpers.testSoundName + "'");
           })
           .end(done);
       })();
@@ -65,9 +65,9 @@ describe('The site for humans', function(){
 
     it('shows up nicely for existing sounds', function (done) {
       request
-        .get('/sound/booooring')
+        .get('/sound/' + testHelpers.testSoundName)
         .expect(function (req) {
-          req.text.should.containEql("booooring");
+          req.text.should.containEql(testHelpers.testSoundName);
         })
         .expect(200)
         .end(done);
@@ -75,7 +75,7 @@ describe('The site for humans', function(){
 
     it('accepts an autoplay parameter to play the sound directly', function (done) {
       request
-        .get('/sound/booooring?autoplay=true')
+        .get('/sound/' + testHelpers.testSoundName + '?autoplay=true')
         .expect(function (req) {
           req.text.should.containEql("autoplay='autoplay'");
         })
@@ -85,7 +85,7 @@ describe('The site for humans', function(){
 
     it('no autoplay parameter doesnt play the sound, of course', function (done) {
       request
-        .get('/sound/booooring')
+        .get('/sound/' + testHelpers.testSoundName)
         .expect(function (req) {
           req.text.should.not.containEql("autoplay='autoplay'");
         })
