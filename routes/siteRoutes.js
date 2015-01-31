@@ -11,7 +11,7 @@ module.exports.showHomePage = function *(){
 };
 
 module.exports.showSoundPage = function *(soundName) {
-	var s = yield soundCollection.findOne({ name: "booooring"});
+	var s = yield soundCollection.findOne({ name: soundName});
 
 	if(this.query.autoplay){
 		s.play = true;

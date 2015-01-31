@@ -77,7 +77,17 @@ describe('The site for humans', function(){
       request
         .get('/sound/booooring?autoplay=true')
         .expect(function (req) {
-          req.text.should.containEql("playSound('booooring');");
+          req.text.should.containEql("autoplay='autoplay'");
+        })
+        .expect(200)
+        .end(done);
+    });
+
+    it('no autoplay parameter doesnt play the sound, of course', function (done) {
+      request
+        .get('/sound/booooring')
+        .expect(function (req) {
+          req.text.should.not.containEql("autoplay='autoplay'");
         })
         .expect(200)
         .end(done);

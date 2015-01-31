@@ -4,24 +4,20 @@
 <div class="container">
 	<div class="jumbotron">
 		<h1>{{ sound.heading}}</h1>
-	<div>
-	<div>
 		<p>
 			<audio
 				id="{{ sound.name }}"
 				src="/api/sound/{{ sound.name }}"
 				preload="auto"
+				{% if sound.play === true  %}
+				autoplay='autoplay'
+				{% endif %}
 				autobuffer>
 			</audio>
 			<a class="btn btn-lg btn-info button_type_sound" data-soundname="{{ sound.name }}" onClick="EvalSound('{{ sound.name }}')" role="button">{{ sound.heading }}</a>
 		</p>
 		<p class="normal">{{ sound.description }}</p>
 		<p class="normal">URL for instant play: <input type="text" enabled="false" value="http://booooring.com/sound/{{ sound.name }}?autoplay=true" /></p>
-		{% if sound.play === true  %}
-		<script type="text/javascript">
-			playSound('{{ sound.name }}');
-		</script>
-		{% endif %}
 	</div>
 </div>
 {% endblock %}

@@ -1,16 +1,17 @@
 # What is it?
-The soundtrack for your meetings.
+Soundtrack for your meetings.
 
 # Kanban
 ## Ideas, things I might add
 - hit list, top 10 played sounds
 - my favorites - store in cookie
-- search per tag
--- Add tags to the data model
-- possibility to add picture
+- tags for sounds
+-- show links to tag per sound
+-- list all sounds per tag
+- possibility to add picture per sound
+- comments for the sound page, via disqus
 
 ## Todo
-- configure booring.com to point to boooring.herokuapp.com
 - store the number of plays per sound
 - show the number of plays each sound has been played
 - More sounds:
@@ -21,11 +22,12 @@ The soundtrack for your meetings.
 -- Hammarbyklacken
 
 ## Doing
-- /sound/:name - show only that sound. Accept and autoplay parameter
 - buy booring.com
+- configure booring.com to point to boooring.herokuapp.com
 
 
 ## Done
+- /sound/:name - show only that sound. Accept and autoplay parameter
 - new layout so that more button fits
 - move the data, except the sounds, to a database
 - initial setup
