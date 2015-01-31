@@ -12,5 +12,10 @@ module.exports.showHomePage = function *(){
 
 module.exports.showSoundPage = function *(soundName) {
 	var s = yield soundCollection.findOne({ name: "booooring"});
+
+	if(this.query.autoplay){
+		s.play = true;
+	}
+
 	this.body = yield render('sound', { sound : s });
 };

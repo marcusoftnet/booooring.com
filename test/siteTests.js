@@ -57,20 +57,30 @@ describe('The site for humans', function(){
   });
 
   describe('has a page for one sound that', function () {
-    it('shows up nicely for existing sounds', function (done) {
+    beforeEach(function (done) {
       co(function *() {
         testHelpers.seedDb();
-
-        request
-          .get('/sound/booooring')
-          .expect(function (req) {
-                req.text.should.containEql("booooring");
-          })
-          .expect(200)
-          .end(done);
-      })();
+      })(done);
     });
 
-    it('accepts an autoplay parameter to play the sound directly');
+    it('shows up nicely for existing sounds', function (done) {
+      request
+        .get('/sound/booooring')
+        .expect(function (req) {
+          req.text.should.containEql("booooring");
+        })
+        .expect(200)
+        .end(done);
+    });
+
+    it('accepts an autoplay parameter to play the sound directly', function (done) {
+      request
+        .get('/sound/booooring?autoplay=true')
+        .expect(function (req) {
+          req.text.should.containEql("playSound('booooring');");
+        })
+        .expect(200)
+        .end(done);
+    });
   });
 });

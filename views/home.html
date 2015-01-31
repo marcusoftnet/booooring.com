@@ -6,7 +6,7 @@
 	<div class="col-md-4">
 		<center><p>
 			<audio id="{{ sound.name }}" src="/api/sound/{{ sound.name }}" preload="auto" autobuffer></audio>
-			<a class="btn btn-lg btn-info button_type_sound" data-soundname="{{ sound.name }}" onClick="EvalSound('{{ sound.name }}')" role="button">{{ sound.heading }}</a>
+			<a class="btn btn-lg btn-info button_type_sound" data-soundname="{{ sound.name }}" onClick="playSound('{{ sound.name }}')" role="button">{{ sound.heading }}</a>
 		</p>
 		<p><a href='/sound/{{ sound.name }}'>Details...</a>
 		<p class="normal">{{ sound.description }}</p>
