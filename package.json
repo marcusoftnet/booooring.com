@@ -1,6 +1,6 @@
 {
   "name": "booooring.com",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The #1 goto place for your meeting sounds",
   "main": "app.js",
   "scripts": {
@@ -15,6 +15,7 @@
   "devDependencies": {
     "co": "~3.1.0",
     "mocha": "~2.1.0",
+    "semver": "^4.2.0",
     "supertest": "~0.15.0"
   },
   "dependencies": {
