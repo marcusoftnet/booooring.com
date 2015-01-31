@@ -4,11 +4,21 @@ var should = require('should');
 var request = testHelpers.request;
 
 describe('The site for humans', function(){
-  describe('has a home page that', function(){
 
-    beforeEach(function (done) {
-      testHelpers.removeAllDocs(done);
+  beforeEach(function (done) {
+    testHelpers.removeAllDocs(done);
+  });
+
+  describe('has a disclaimer page that', function () {
+
+    it('shows up without problems', function(done){
+      request
+      .get('/disclaimer')
+      .expect(200, done);
     });
+  });
+
+  describe('has a home page that', function(){
 
     it('shows up nicely without errors', function(done){
       request
@@ -31,11 +41,36 @@ describe('The site for humans', function(){
           .end(done);
       })();
     });
+
+    it('the list of sounds links to the sound page', function (done) {
+      co(function *() {
+        testHelpers.seedDb();
+
+        request
+          .get('/')
+          .expect(function (req) {
+            req.text.should.containEql("href='/sound/booooring'");
+          })
+          .end(done);
+      })();
+    });
   });
 
-  it('has a disclaimer page', function(done){
-    request
-    .get('/disclaimer')
-    .expect(200, done);
+  describe('has a page for one sound that', function () {
+    it('shows up nicely for existing sounds', function (done) {
+      co(function *() {
+        testHelpers.seedDb();
+
+        request
+          .get('/sound/booooring')
+          .expect(function (req) {
+                req.text.should.containEql("booooring");
+          })
+          .expect(200)
+          .end(done);
+      })();
+    });
+
+    it('accepts an autoplay parameter to play the sound directly');
   });
 });

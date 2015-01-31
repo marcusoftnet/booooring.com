@@ -2,22 +2,28 @@
 The soundtrack for your meetings.
 
 # Kanban
-## Todo
-- configure booring.com to point to boooring.herokuapp.com
-
-- /sound/:name - show only that sound. Accept and autoplay parameter
-
-- store the number of plays
-
-
-- search
-- filter
-- Add tags to the data model
-
+## Ideas, things I might add
+- hit list, top 10 played sounds
+- my favorites - store in cookie
+- search per tag
+-- Add tags to the data model
 - possibility to add picture
 
+## Todo
+- configure booring.com to point to boooring.herokuapp.com
+- store the number of plays per sound
+- show the number of plays each sound has been played
+- More sounds:
+-- Aaaah from Exalicbur
+-- Doh!
+-- Yes!
+-- Noooooooooooooo
+-- Hammarbyklacken
+
 ## Doing
+- /sound/:name - show only that sound. Accept and autoplay parameter
 - buy booring.com
+
 
 ## Done
 - new layout so that more button fits

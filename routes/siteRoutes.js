@@ -9,3 +9,8 @@ module.exports.showHomePage = function *(){
 	var soundList = yield soundCollection.find({});
 	this.body = yield render('home', { sounds : soundList });
 };
+
+module.exports.showSoundPage = function *(soundName) {
+	var s = yield soundCollection.findOne({ name: "booooring"});
+	this.body = yield render('sound', { sound : s });
+};

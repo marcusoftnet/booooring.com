@@ -13,6 +13,7 @@ app.use(route.get("/api/sound/:soundName" , apihandler.streamFile));
 var sitehandler = require("./routes/siteRoutes.js");
 app.use(route.get("/" , sitehandler.showHomePage));
 app.use(route.get("/disclaimer" , sitehandler.showDisclaimerPage));
+app.use(route.get("/sound/:soundName" , sitehandler.showSoundPage));
 
 // start it
 app.listen(config.port);
