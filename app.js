@@ -9,6 +9,7 @@ app.use(serve(__dirname + '/public'));
 // routes
 var apihandler = require("./routes/routesApi.js");
 app.use(route.get("/api/sound/:soundName" , apihandler.streamFile));
+app.use(route.post("/api/played/:soundName" , apihandler.soundPlayed));
 
 var sitehandler = require("./routes/siteRoutes.js");
 app.use(route.get("/" , sitehandler.showHomePage));

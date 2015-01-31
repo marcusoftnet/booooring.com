@@ -10,24 +10,24 @@ Soundtrack for your meetings.
 -- list all sounds per tag
 - possibility to add picture per sound
 - comments on the sound page, via disqus
+- Button to copy URL for autoplay to clipboard (ZeroClipboard)
 
 ## Todo
-- show the number of plays each sound has been played
+- Ads on the page
+
+## Doing
+- buy booring.com
+- configure booring.com to point to boooring.herokuapp.com
 - More sounds:
 -- Aaaah from Exalicbur
 -- Doh!
 -- Yes!
 -- Noooooooooooooo
 -- Hammarbyklacken
-- Button to copy URL for autoplay to clipboard (ZeroClipboard)
-
-## Doing
-- buy booring.com
-- configure booring.com to point to boooring.herokuapp.com
-- store the number of plays per sound
-
 
 ## Done
+- show the number of plays each sound has been played
+- store the number of plays per sound
 - /sound/:name - show only that sound. Accept and autoplay parameter
 - new layout so that more button fits
 - move the data, except the sounds, to a database

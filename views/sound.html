@@ -17,6 +17,11 @@
 			<a class="btn btn-lg btn-info button_type_sound" data-soundname="{{ sound.name }}" onClick="playSound('{{ sound.name }}')" role="button">{{ sound.heading }}</a>
 		</p>
 		<p class="normal">{{ sound.description }}</p>
+		{% if sound.noOfPlays  %}
+			<p class="normal">This sound is played: {{ sound.noOfPlays }} times, already. Why not make it one more?</p>
+		{% else %}
+			<p class="normal">This sound is not yet played. You can be the first!</p>
+		{% endif %}
 		<p class="normal">URL for instant play: <input type="text" enabled="false" value="http://booooring.com/sound/{{ sound.name }}?autoplay=true" /></p>
 	</div>
 </div>

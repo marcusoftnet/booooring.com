@@ -2,6 +2,7 @@ var co = require('co');
 var config = require('../config')('local');
 var db = require("../lib/db.js");
 var soundCollection = db.sounds(config.mongoUrl);
+module.exports.soundCollection = soundCollection;
 
 module.exports.removeAllDocs = function(done){
 	co(function *(){

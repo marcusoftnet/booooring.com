@@ -49,9 +49,15 @@
     <script src="/js/jquery.min.js"></script>
     <script src="/js/ie10-viewport-bug-workaround.js"></script>
     <script>
-      function playSound(soundobj) {
-        var thissound=document.getElementById(soundobj);
+      function playSound(soundName) {
+        var thissound=document.getElementById(soundName);
         thissound.play();
+        $.ajax({
+          type        : 'POST',
+          url         : '/api/played/' + soundName,
+          success     : function () { console.log("Sound played")},
+          error       : function () { console.log("Errors when logging played");}
+    });
       };
     </script>
     <script>
