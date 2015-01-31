@@ -1,4 +1,4 @@
-var mongoProdUri = process.env.MONGOHQ_URL || 'localhost:27017/boooring_Prod';
+var mongoProdUri = process.env.MONGOLAB_URI || 'localhost:27017/boooring_Prod';
 
 var config = {
 	local: {
