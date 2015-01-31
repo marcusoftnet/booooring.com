@@ -9,9 +9,9 @@
 				id="{{ sound.name }}"
 				src="/api/sound/{{ sound.name }}"
 				preload="auto"
-				{% if sound.play === true  %}
+			{% if sound.play === true  %}
 				autoplay='autoplay'
-				{% endif %}
+			{% endif %}
 				autobuffer>
 			</audio>
 			<a class="btn btn-lg btn-info button_type_sound" data-soundname="{{ sound.name }}" onClick="playSound('{{ sound.name }}')" role="button">{{ sound.heading }}</a>

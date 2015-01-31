@@ -4,13 +4,13 @@ The soundtrack for your office
 # Kanban
 ## Ideas, things I might add
 - hit list, top 10 played sounds
-- my favorites - store in cookie
+- my favorites - store sound name in cookie
 - tags for sounds
 -- show links to tag per sound
 -- list all sounds per tag
-- possibility to add picture per sound
+- possibility to add a picture per sound
 - comments on the sound page, via disqus
-- Button to copy URL for autoplay to clipboard (ZeroClipboard)
+- button to copy URL for autoplay to clipboard (ZeroClipboard)
 
 ## Todo
 - buy booring.com
@@ -26,9 +26,9 @@ The soundtrack for your office
 - Ads on the page
 
 ## Doing
-- Add Makefile
 
 ## Done
+- Add Makefile
 - show the number of plays each sound has been played
 - store the number of plays per sound
 - /sound/:name - show only that sound. Accept and autoplay parameter
