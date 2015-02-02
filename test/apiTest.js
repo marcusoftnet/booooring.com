@@ -30,6 +30,7 @@ describe('API for web pages', function(){
         request
           .post("/api/played/" + testHelpers.testSoundName)
           .expect(200)
+          .expect({ noOfPlays : 1 })
           .end(function (){
             co(function *() {
               var sound = yield testHelpers.soundCollection.findOne({name :  testHelpers.testSoundName});
@@ -42,11 +43,13 @@ describe('API for web pages', function(){
     	co(function *() {
 	      testHelpers.seedDb();
 
-	    	yield testHelpers.soundCollection.insert({ name: 'booooring', noOfPlays : 12 })
+        var testDataAlreadyPlayed = 12;
+	    	yield testHelpers.soundCollection.insert({ name: 'booooring', noOfPlays : testDataAlreadyPlayed })
 
         request
           .post("/api/played/" + testHelpers.testSoundName)
           .expect(200)
+          .expect({ noOfPlays : testDataAlreadyPlayed+1 })
           .end(function (){
             co(function *() {
               var sound = yield testHelpers.soundCollection.findOne({name : testHelpers.testSoundName});

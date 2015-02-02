@@ -17,7 +17,10 @@ module.exports.streamFile = function *(soundName){
 };
 
 module.exports.soundPlayed = function *(soundName) {
-	var s = yield soundCollection.findAndModify({name: soundName}, { $inc: { noOfPlays : 1 }});
+	yield soundCollection.findAndModify({name: soundName}, { $inc: { noOfPlays : 1 }});
 
+	var updatedSound = yield soundCollection.findOne({name: soundName});
+
+	this.body = { noOfPlays : updatedSound.noOfPlays };
 	this.status = 200;
 };

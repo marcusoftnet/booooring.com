@@ -1,0 +1,7 @@
+<div class="normal">
+    {% if sound.noOfPlays %}
+        <span id="noOfPlays{{ sound.name }}">Played {{ sound.noOfPlays }} times</span>
+    {% else%}
+        <span id="noOfPlays{{ sound.name }}">Not yet played...</span>
+    {% endif %}
+</div>

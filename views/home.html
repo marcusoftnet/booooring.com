@@ -3,13 +3,14 @@
     {% for sound in sounds %}
     <div class="col-md-4">
         <center>
-            <p>
+            <div>
                 <audio id="{{ sound.name }}" src="/api/sound/{{ sound.name }}" preload="auto" autobuffer></audio>
                 <a class="btn btn-lg btn-info button_type_sound" data-soundname="{{ sound.name }}" onClick="playSound('{{ sound.name }}')" role="button">{{ sound.heading }}</a>
-            </p>
-            <p class="normal">
-                {% if sound.noOfPlays %} Played: {{ sound.noOfPlays }} times {% endif %}
+            </div>
+            <div class="normal">
+                {% include "./soundPlayedPartial.html" %}
                 <a href='/sound/{{ sound.name }}'>Details...</a>
+            </div>
         </center>
     </div>
     {% endfor %}
