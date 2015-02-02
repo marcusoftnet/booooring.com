@@ -10,10 +10,9 @@ The soundtrack for your office
 -- list all sounds per tag
 - possibility to add a picture per sound
 - loop sounds
-- button to copy URL for autoplay to clipboard (ZeroClipboard)
 
 ## Todo
-- Jquery to update the number of plays
+- button to copy URL for autoplay to clipboard (ZeroClipboard)
 
 - More sounds:
 -- angleChoir; Aaaah from Exalicbur
@@ -27,9 +26,10 @@ The soundtrack for your office
 - Ads on the page
 
 ## Doing
-- comments on the sound page, via disqus
 
 ## Done
+- Jquery to update the number of plays
+- comments on the sound page, via disqus
 - sharing buttons
 - configure booring.com to point to boooring.herokuapp.com
 - buy booring.com
