@@ -5,10 +5,10 @@ function playSound(soundName) {
         type: 'POST',
         url: '/api/played/' + soundName,
         success: function() {
-            console.log("Sound played")
+            console.log("Sound '" + soundName + "' played")
         },
         error: function(e) {
-            console.log("Errors when logging played");
+            console.log("Errors when played '" + soundName + "'");
             console.log(e);
         }
     });

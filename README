@@ -9,13 +9,12 @@ The soundtrack for your office
 -- show links to tag per sound
 -- list all sounds per tag
 - possibility to add a picture per sound
-- comments on the sound page, via disqus
 - loop sounds
 - button to copy URL for autoplay to clipboard (ZeroClipboard)
 
 ## Todo
-- buy booring.com
-- configure booring.com to point to boooring.herokuapp.com
+- Jquery to update the number of plays
+
 - More sounds:
 -- angleChoir; Aaaah from Exalicbur
 -- Doh!
@@ -24,12 +23,16 @@ The soundtrack for your office
 -- Hammarbyklacken
 -- Clap clap clapclapclap
 
-- Superslick layout - buy from someone
+- Superslick layout - buy from someone?
 - Ads on the page
 
 ## Doing
+- comments on the sound page, via disqus
 
 ## Done
+- sharing buttons
+- configure booring.com to point to boooring.herokuapp.com
+- buy booring.com
 - Add Makefile
 - show the number of plays each sound has been played
 - store the number of plays per sound
