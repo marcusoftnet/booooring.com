@@ -1,18 +1,38 @@
 {% extends 'layout.html' %} {% block content %}
-<div class="container">
+<div class="row">
     {% for sound in sounds %}
-    <div class="col-md-4">
-        <center>
-            <div>
-                <audio id="{{ sound.name }}" src="/api/sound/{{ sound.name }}" preload="auto" autobuffer></audio>
-                <a class="btn btn-lg btn-info button_type_sound" data-soundname="{{ sound.name }}" onClick="playSound('{{ sound.name }}')" role="button">{{ sound.heading }}</a>
+        <div class="col-lg-3 col-sm-4 col-xs-6">
+            <div class="panel">
+                <div class="panel-heading">
+                    <h3>{{ sound.heading }}</h3>
+                </div>
+                <div class="panel-body">
+                    <table>
+                        <tr>
+                            <td width="45%">
+                                <audio id="{{ sound.name }}" src="/api/sound/{{ sound.name }}" preload="auto" autobuffer></audio>
+                                <a class="btn btn-lg btn-primary button_type_sound" data-soundname="{{ sound.name }}" onClick="playSound('{{ sound.name }}')" role="button" title="{{ sound.description }}">Play!</a>
+                            </td>
+                            <td width="15%">&nbsp;</td>
+                            <td width="45%">
+                                <table>
+                                    <tr>
+                                        <td class="lead">
+                                            <a href='/sound/{{ sound.name }}'>Details...</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="lead">
+                                            {% include "./soundPlayedPartial.html" %}
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-            <div class="normal">
-                {% include "./soundPlayedPartial.html" %}
-                <a href='/sound/{{ sound.name }}'>Details...</a>
-            </div>
-        </center>
-    </div>
+        </div>
     {% endfor %}
 </div>
 {% endblock %}
