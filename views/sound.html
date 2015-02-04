@@ -30,13 +30,19 @@
 	                                </td>
 	                            </tr>
 	                            <tr>
-	                    	        <td class="normal">
+	                    	        <td class="lead">
 	                    	        	{% include "./soundPlayedPartial.html" %}
 	                    	        </td>
 	                            </tr>
 	                            <tr>
 	                            	<td>
-	                            		URL for instant play: <input type="text" enabled="false" value="http://booooring.com/sound/{{ sound.name }}?autoplay=true" />
+	                            		<button 
+	                            			class="btn btn-small"
+	                            			id="copy-button" 
+	                            			data-clipboard-text="http://booooring.com/sound/{{ sound.name }}?autoplay=true" 
+	                            			title="URL for instant play">
+	                            				URL for instant play
+                            			</button>
 	                            	</td>
 	                            </tr>
 	                        </table>
