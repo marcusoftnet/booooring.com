@@ -12,17 +12,19 @@ The soundtrack of your office
 - loop sounds
 
 ## Todo
-
+- Read in proper database on test
 - More sounds:
 -- Hammarbyklacken
 -- Clap clap clapclapclap
-
+-- That's be great!
+-- Sheep
+-- Chickens
 
 ## Doing
+- Superslick layout - buy from someone?
 
 ## Done
 - button to copy URL for autoplay to clipboard (ZeroClipboard)
-- Superslick layout - buy from someone?
 - Ads on the page
 - Jquery to update the number of plays
 - comments on the sound page, via disqus
