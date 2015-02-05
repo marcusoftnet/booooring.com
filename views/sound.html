@@ -2,29 +2,18 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-lg-12">
+    <div class="col-12">
 		<div class="panel">
 	        <div class="panel-heading">
 	            <h3>{{ sound.heading }}</h3>
 	        </div>
 	        <div class="panel-body">
-	            <table>
+	            <table border="1">
 	                <tr>
 	                    <td width="30%">
-	                        <audio
-	                        	id="{{ sound.name }}"
-	                        	src="/api/sound/{{ sound.name }}"
-	                        	preload="auto"
-	                        {% if sound.play === true  %}
-	                        	autoplay='autoplay'
-	                        {% endif %}
-	                        	autobuffer>
-	                        </audio>
-	                        <button class="btn btn-lg btn-primary button_type_sound" data-soundname="{{ sound.name }}" onClick="playSound('{{ sound.name }}')" role="button">
-                                <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-                                Play!
-	                        </button>
+                            {% include "./playButton.html" %}
 	                    </td>
+                        <td width="15%">&nbsp;</td>
 	                    <td>
 	                        <table>
 	                            <tr>
@@ -47,7 +36,7 @@
                                 				<span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
                                 				Copy Autoplay URL
                             			</button>
-                            			<span class="normal" id="copyMessage"></span>
+                            			<br /><span class="normal" id="copyMessage"></span>
 	                            	</td>
 	                            </tr>
 	                        </table>

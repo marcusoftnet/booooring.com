@@ -3,8 +3,6 @@ The soundtrack of your office
 
 # Kanban
 ## Ideas, things I might add
-- hit list, top 10 played sounds
-- my favorites - store sound name in cookie
 - tags for sounds
 -- show links to tag per sound
 -- list all sounds per tag
@@ -12,18 +10,21 @@ The soundtrack of your office
 - loop sounds
 
 ## Todo
-- Read in proper database on test
+- hit list, top 10 played sounds
 - More sounds:
 -- Hammarbyklacken
 -- Clap clap clapclapclap
--- That's be great!
+-- That'd be great!
 -- Sheep
--- Chickens
+-- Chicken
 
 ## Doing
-- Superslick layout - buy from someone?
+- my favorites - store sound name in cookie
 
 ## Done
+- refactored the playbutton to a partial view
+- Read in proper database on test
+- Superslick layout - buy from someone?
 - button to copy URL for autoplay to clipboard (ZeroClipboard)
 - Ads on the page
 - Jquery to update the number of plays

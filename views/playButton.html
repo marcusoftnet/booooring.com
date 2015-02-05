@@ -1,0 +1,19 @@
+<div>
+    <audio
+    	id="{{ sound.name }}"
+    	src="/api/sound/{{ sound.name }}"
+    	preload="auto"
+		{% if sound.play === true  %}
+        	autoplay='autoplay'
+        {% endif %}
+    	autobuffer>
+    </audio>
+    <button
+    	class="btn btn-lg btn-primary button_type_sound"
+    	data-soundname="{{ sound.name }}"
+    	role="button"
+    	title="{{ sound.description }}"
+    	onClick="playSound('{{ sound.name }}')">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Play!
+    </button>
+</div>
