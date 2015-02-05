@@ -41,8 +41,6 @@ describe('API for web pages', function(){
     });
     it('increments the number of plays with 1 for sounds that is played', function (done) {
     	co(function *() {
-	      testHelpers.seedDb();
-
         var testDataAlreadyPlayed = 12;
 	    	yield testHelpers.soundCollection.insert({ name: 'booooring', noOfPlays : testDataAlreadyPlayed })
 

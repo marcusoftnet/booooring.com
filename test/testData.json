@@ -1,0 +1,50 @@
+[{
+    "name" : "booooring",
+    "heading" : "Booooring",
+    "description" : "When this is just to booooring!"
+},
+{
+    "name" : "slaves",
+    "heading" : "Slave choir",
+    "description" : "When it's just too much working"
+},
+{
+    "name" : "soclose",
+    "heading" : "So close",
+    "description" : "When someone presented something that didn't really went down as planned"
+},
+{
+    "name" : "slowclap",
+    "heading" : "Slow clapping",
+    "description" : "When something is a little bit pretentious"
+},
+{
+    "name" : "angels",
+    "heading" : "Angel choir",
+    "description" : "When you've just found Exalibur"
+},
+{
+    "name" : "sosweet",
+    "heading" : "Aaaawwww... so sweet",
+    "description" : "When it's so sweet that you just aaaaawwww"
+},
+{
+    "name" : "noooo",
+    "heading" : "NOOOoooo....!",
+    "description" : "When it didn't go your way or when Darth Vader is your father"
+},
+{
+    "name" : "yesssss",
+    "heading" : "YES!",
+    "description" : "When it went your way"
+},
+{
+    "name" : "doh",
+    "heading" : "DOH!",
+    "description" : "When you made a dodo"
+},
+{
+    "name" : "huh",
+    "heading" : "Huh?!",
+    "description" : "When you didn't expect that"
+}]
