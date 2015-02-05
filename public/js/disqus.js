@@ -1,5 +1,11 @@
 /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 var disqus_shortname = 'booooringcom';
+var disqus_identifier = window.location.pathname;
+var disqus_url = window.location.href;
+
+console.log(disqus_identifier);
+console.log(disqus_url);
+console.log(window.location);
 
 /* * * DON'T EDIT BELOW THIS LINE * * */
 (function() {
