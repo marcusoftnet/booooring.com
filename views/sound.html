@@ -20,7 +20,10 @@
 	                        {% endif %}
 	                        	autobuffer>
 	                        </audio>
-	                        <button class="btn btn-lg btn-primary button_type_sound" data-soundname="{{ sound.name }}" onClick="playSound('{{ sound.name }}')" role="button">Play!</button>
+	                        <button class="btn btn-lg btn-primary button_type_sound" data-soundname="{{ sound.name }}" onClick="playSound('{{ sound.name }}')" role="button">
+                                <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                                Play!
+	                        </button>
 	                    </td>
 	                    <td>
 	                        <table>
@@ -36,13 +39,15 @@
 	                            </tr>
 	                            <tr>
 	                            	<td>
-	                            		<button 
-	                            			class="btn btn-small"
-	                            			id="copy-button" 
-	                            			data-clipboard-text="http://booooring.com/sound/{{ sound.name }}?autoplay=true" 
+	                            		<button
+	                            			class="btn btn-info"
+	                            			id="copy-button"
+	                            			data-clipboard-text="http://booooring.com/sound/{{ sound.name }}?autoplay=true"
 	                            			title="URL for instant play">
-	                            				URL for instant play
+                                				<span class="glyphicon glyphicon-copy" aria-hidden="true"></span>
+                                				Copy Autoplay URL
                             			</button>
+                            			<span class="normal" id="copyMessage"></span>
 	                            	</td>
 	                            </tr>
 	                        </table>

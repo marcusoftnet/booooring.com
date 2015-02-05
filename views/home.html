@@ -11,7 +11,9 @@
                         <tr>
                             <td width="45%">
                                 <audio id="{{ sound.name }}" src="/api/sound/{{ sound.name }}" preload="auto" autobuffer></audio>
-                                <button class="btn btn-lg btn-primary button_type_sound" data-soundname="{{ sound.name }}" onClick="playSound('{{ sound.name }}')" role="button" title="{{ sound.description }}">Play!</button>
+                                <button class="btn btn-lg btn-primary button_type_sound" data-soundname="{{ sound.name }}" onClick="playSound('{{ sound.name }}')" role="button" title="{{ sound.description }}">
+                                    <span class="glyphicon glyphicon-play" aria-hidden="true"></span>Play!
+                                </button>
                             </td>
                             <td width="15%">&nbsp;</td>
                             <td width="45%">
