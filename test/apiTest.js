@@ -56,5 +56,5 @@ describe('API for web pages', function(){
           });
       })();
     });
-  })
+  });
 });

@@ -47,4 +47,25 @@
     "name" : "huh",
     "heading" : "Huh?!",
     "description" : "When you didn't expect that"
-}]
+},
+{
+    "name" : "chickens",
+    "heading" : "Chickens",
+    "description" : "When someone is chickening out."
+},
+{
+    "name" : "clapclapclap",
+    "heading" : "Clap clap clap",
+    "description" : "When synchronized clapping is in order"
+},
+{
+    "name" : "malecheering",
+    "heading" : "Male cheering",
+    "description" : "When you need to edge someone on... Whooauoaaaoaaa!"
+},
+{
+    "name" : "sheep",
+    "heading" : "Sheep",
+    "description" : "When someone just Baaaaaaaaa-ed"
+}
+]
