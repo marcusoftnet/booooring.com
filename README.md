@@ -11,6 +11,8 @@ The soundtrack of your office
 - loop sounds
 
 ## Todo
+- sort home page on number of plays
+- my favorites - store my favorites sounds
 - Link to github issues to ask for more sounds
 - More sounds:
 -- Hammarbyklacken
@@ -20,9 +22,9 @@ The soundtrack of your office
 -- Chicken
 
 ## Doing
-- my favorites - store my favorites sounds
 
 ## Done
+- favicon
 - refactored the playbutton to a partial view
 - Read in proper database on test
 - Superslick layout - buy from someone?

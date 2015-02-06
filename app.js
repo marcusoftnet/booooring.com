@@ -1,10 +1,12 @@
 var app = module.exports = require("koa")();
 var route = require("koa-route");
+var favicon = require('koa-favicon');
 var serve = require('koa-static');
 var config = require('./config')();
 
 // configuration of middleware
 app.use(serve(__dirname + '/public'));
+app.use(favicon(__dirname + '/public/favicon.ico'));
 
 // routes
 var apihandler = require("./routes/routesApi.js");
