@@ -3,6 +3,7 @@ The soundtrack of your office
 
 # Kanban
 ## Ideas, things I might add
+- hit list, top 10 played sounds
 - tags for sounds
 -- show links to tag per sound
 -- list all sounds per tag
@@ -10,7 +11,7 @@ The soundtrack of your office
 - loop sounds
 
 ## Todo
-- hit list, top 10 played sounds
+- Link to github issues to ask for more sounds
 - More sounds:
 -- Hammarbyklacken
 -- Clap clap clapclapclap
@@ -19,7 +20,7 @@ The soundtrack of your office
 -- Chicken
 
 ## Doing
-- my favorites - store sound name in cookie
+- my favorites - store my favorites sounds
 
 ## Done
 - refactored the playbutton to a partial view
