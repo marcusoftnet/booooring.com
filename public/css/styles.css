@@ -1,7 +1,9 @@
 td.wider {
     width: 45%;
 }
-
-td.narrower{
-  width: 10%;
+td.narrower {
+    width: 10%;
+}
+.centered {
+    text-align: center;
 }
