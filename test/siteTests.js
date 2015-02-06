@@ -9,6 +9,10 @@ describe('The site for humans', function(){
     testHelpers.removeAllDocs(done);
   });
 
+  afterEach(function (done) {
+    testHelpers.removeAllDocs(done);
+  });
+
   describe('has a disclaimer page that', function () {
 
     it('shows up without problems', function(done){
