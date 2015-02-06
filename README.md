@@ -13,7 +13,6 @@ The soundtrack of your office
 ## Todo
 - sort home page on number of plays
 - my favorites - store my favorites sounds
-- Link to github issues to ask for more sounds
 - More sounds:
 -- Hammarbyklacken
 -- Clap clap clapclapclap
@@ -22,6 +21,7 @@ The soundtrack of your office
 -- Chicken
 
 ## Doing
+- Link to github issues to ask for more sounds
 
 ## Done
 - favicon
