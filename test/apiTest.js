@@ -23,6 +23,10 @@ describe('API for web pages', function(){
       testHelpers.removeAllDocs(done);
     });
 
+    afterEach(function (done) {
+      testHelpers.removeAllDocs(done);
+    });
+
     it('sets the number of plays to 1 for a sound that noone has played', function (done) {
       co(function *() {
         testHelpers.seedDb();
