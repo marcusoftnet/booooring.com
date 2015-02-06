@@ -8,12 +8,27 @@ var soundCollection = db.sounds(config.mongoUrl);
 
 module.exports.streamFile = function *(soundName){
 	var path = __dirname + "/../sounds/" + soundName + ".mp3";
-	this.type = extname(path);
 
+	var fileExists = yield exists(path);
+
+	if(!fileExists){
+		this.status = 404;
+		return;
+	}
+
+	this.type = extname(path);
 	var stream = this.body = fs.createReadStream(path);
 
 	// avoid any possible fd leak
 	onFinished(this, stream.destroy.bind(stream));
+};
+
+function exists(filename) {
+	return function(done){
+    	fs.stat(filename, function(err, res){
+      		done(null, !err);
+    	});
+  	};
 };
 
 module.exports.soundPlayed = function *(soundName) {
