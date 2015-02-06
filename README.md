@@ -11,20 +11,19 @@ The soundtrack of your office
 - loop sounds
 
 ## Todo
-- sort home page on number of plays
 - my favorites - store my favorites sounds
+
+## Doing
+
+## Done
+- sort home page on number of plays
+- Link to github issues to ask for more sounds
+- favicon
 - More sounds:
 -- Hammarbyklacken
 -- Clap clap clapclapclap
--- That'd be great!
 -- Sheep
 -- Chicken
-
-## Doing
-- Link to github issues to ask for more sounds
-
-## Done
-- favicon
 - refactored the playbutton to a partial view
 - Read in proper database on test
 - Superslick layout - buy from someone?

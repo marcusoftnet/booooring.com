@@ -8,7 +8,7 @@ module.exports.showDisclaimerPage = function *(){
 };
 
 module.exports.showHomePage = function *(){
-	var soundList = yield soundCollection.find({});
+	var soundList = yield soundCollection.find({}, { sort:{ noOfPlays : -1}});
 	this.body = yield render('home', { sounds : soundList });
 };
 
