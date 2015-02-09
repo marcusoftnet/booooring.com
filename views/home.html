@@ -1,5 +1,10 @@
-{% extends 'layout.html' %} {% block content %}
-<span id="totalNoPlays">{{ totalNoPlays }}</span>
+{% extends 'layout.html' %}
+{% block summary %}
+    <p class="normal"><span id="totalNoSounds">{{ totalNoSounds }}</span> number of sounds play a total of <span id="totalNoPlays">{{ totalNoPlays }}</span> times</p>
+{% endblock summary %}
+
+
+{% block content %}
 <div class="row">
     {% for sound in sounds %}
         <div class="col-lg-3 col-sm-4 col-xs-12">

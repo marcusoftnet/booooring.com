@@ -18,6 +18,12 @@ app.use(route.get("/" , sitehandler.showHomePage));
 app.use(route.get("/disclaimer" , sitehandler.showDisclaimerPage));
 app.use(route.get("/sound/:soundName" , sitehandler.showSoundPage));
 
+// seed the database
+if(process.argv[2] === 'seed'){
+	console.log("Seeding database.... Seeeding it!")
+	require("./test/testHelpers.js").seedDb();
+};
+
 // start it
 app.listen(config.port);
 console.log("The app is stared. Listening on port "+ config.port);

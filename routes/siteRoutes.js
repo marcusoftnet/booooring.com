@@ -10,10 +10,13 @@ module.exports.showDisclaimerPage = function *(){
 module.exports.showHomePage = function *(){
 	var soundList = yield soundCollection.find({}, { sort:{ noOfPlays : -1}});
 
-	var noOfSounds = soundList.length;
-	var totalNoOfPlays = sumNoOfPlays(soundList);
+	var vm = {
+		sounds : soundList,
+		totalNoPlays : sumNoOfPlays(soundList),
+		totalNoSounds : soundList.length
+	};
 
-	this.body = yield render('home', { sounds : soundList, totalNoPlays : totalNoOfPlays });
+	this.body = yield render('home', vm);
 };
 
 module.exports.showSoundPage = function *(soundName) {

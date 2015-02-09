@@ -35,10 +35,12 @@
         <div class="jumbotron">
             <h1>booooring.com</h1>
             <p class="lead">the soundtrack of your office</p>
+            <p class="lead">{% block summary %} {% endblock summary%}</p>
         </div>
 
         {% block content %}
-        <p>No content definied!</p>{% endblock %}
+            <p>No content definied!</p>
+        {% endblock %}
 
         <hr/>
 
