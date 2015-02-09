@@ -9,7 +9,11 @@ module.exports.showDisclaimerPage = function *(){
 
 module.exports.showHomePage = function *(){
 	var soundList = yield soundCollection.find({}, { sort:{ noOfPlays : -1}});
-	this.body = yield render('home', { sounds : soundList });
+
+	var noOfSounds = soundList.length;
+	var totalNoOfPlays = sumNoOfPlays(soundList);
+
+	this.body = yield render('home', { sounds : soundList, totalNoPlays : totalNoOfPlays });
 };
 
 module.exports.showSoundPage = function *(soundName) {
@@ -21,3 +25,14 @@ module.exports.showSoundPage = function *(soundName) {
 
 	this.body = yield render('sound', { sound : s });
 };
+
+function sumNoOfPlays (soundList) {
+	var result =0;
+	for (var i = 0; i < soundList.length; i++) {
+		if(soundList[i].noOfPlays != undefined){
+			result += soundList[i].noOfPlays;
+		}
+	};
+
+	return result;
+}

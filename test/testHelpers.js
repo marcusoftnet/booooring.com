@@ -22,5 +22,11 @@ module.exports.seedDb = function () {
 	})();
 };
 
+module.exports.insertTestSound = function (testSoundData) {
+	co(function *() {
+		yield soundCollection.insert(testSoundData);
+	})();
+};
+
 var app = require('../app.js');
 module.exports.request = require('supertest').agent(app.listen());

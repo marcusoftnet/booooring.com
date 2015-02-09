@@ -11,6 +11,7 @@ The soundtrack of your office
 - loop sounds
 
 ## Todo
+- total plays
 - my favorites - store my favorites sounds
 
 ## Doing
