@@ -11,12 +11,12 @@ The soundtrack of your office
 - loop sounds
 
 ## Todo
-- total plays
 - my favorites - store my favorites sounds
 
 ## Doing
 
 ## Done
+- total plays and total sounds
 - sort home page on number of plays
 - Link to github issues to ask for more sounds
 - favicon

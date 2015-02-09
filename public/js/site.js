@@ -9,10 +9,13 @@ function playSound(soundName) {
         success: function(data) {
             if (data.noOfPlays === 1) {
                 $("#noOfPlays" + soundName).html("Plays: 1");
+                // $("#totalNoPlays").text("1");
             } else {
                 $("#noOfPlays" + soundName).html("Plays: " + data.noOfPlays);
             }
-            console.log(data);
+
+            var total = Number($("#totalNoPlays").text());
+            $("#totalNoPlays").text(total+1);
         },
         error: function(e) {
             console.log("Errors when playing '" + soundName + "':");
