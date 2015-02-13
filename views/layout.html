@@ -7,7 +7,11 @@
     <meta name="description" content="The soundtrack of your meetings">
     <meta name="author" content="Marcus Hammarberg (@marcusoftnet)">
 
-    <title>booooring.com - the soundtrack of your office</title>
+    <title>
+        {% block title %}
+        booooring.com - the soundtrack of your office
+        {% endblock %}
+    </title>
 
     <!-- Bootstrap core CSS -->
     <!-- <link href="/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -70,6 +74,8 @@
     <script src="/js/site.js"></script>
     <script src="/js/ga.js"></script>
     <script type="text/javascript" src="/js/disqus.js"></script>
+
+    {% include "./pageLoggerPartial.html" %}
 </body>
 
 </html>

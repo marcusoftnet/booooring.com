@@ -1,0 +1,12 @@
+<!-- page-logger call -->
+<script type="text/javascript">
+    var pageViewData = {
+        appname : 'booooring.com',
+        title   : document.title,
+        url     : document.URL
+    };
+
+    $.post("https://page-logger.herokuapp.com/api/pageview", pageViewData, function(){
+        console.log(pageViewData.title + " logged - no errors");
+    });
+</script>
