@@ -20,11 +20,13 @@ describe('API for web pages', function(){
 
   describe('counts the number of plays for a sound', function () {
     beforeEach(function (done) {
-      testHelpers.removeAllDocs(done);
+      testHelpers.removeAllDocs();
+      done();
     });
 
     afterEach(function (done) {
-      testHelpers.removeAllDocs(done);
+      testHelpers.removeAllDocs();
+      done();
     });
 
     it('sets the number of plays to 1 for a sound that noone has played', function (done) {
@@ -39,9 +41,10 @@ describe('API for web pages', function(){
             co(function *() {
               var sound = yield testHelpers.soundCollection.findOne({name :  testHelpers.testSoundName});
               sound.noOfPlays.should.equal(1);
-            })(done);
+              done();
+            });
           });
-      })();
+      });
     });
     it('increments the number of plays with 1 for sounds that is played', function (done) {
     	co(function *() {
@@ -56,9 +59,10 @@ describe('API for web pages', function(){
             co(function *() {
               var sound = yield testHelpers.soundCollection.findOne({name : testHelpers.testSoundName});
               sound.noOfPlays.should.equal(13);
-            })(done);
+              done();
+            });
           });
-      })();
+      });
     });
   });
 });

@@ -3,54 +3,19 @@ var co = require('co');
 var should = require('should');
 var request = testHelpers.request;
 
-describe('The site for humans', function(){
+describe('Number of songs and sounds', function(){
 
 	beforeEach(function (done) {
-	testHelpers.removeAllDocs(done);
+		testHelpers.removeAllDocs();
+		done();
 	});
 
 	afterEach(function (done) {
-	testHelpers.removeAllDocs(done);
+		testHelpers.removeAllDocs();
+		done();
 	});
 
 
-	describe('lists the total number of songs', function () {
-		var comparePrefix = 'id="totalNoSounds">';
-
-		it('0 sounds in the database gives zero songs....duh!', function (done) {
-			request
-				.get('/')
-				.expect(function (req) {
-					req.text.should.containEql(comparePrefix +  '0');
-				})
-				.end(done);
-		});
-
-		it('1 sound in the database gives 1 in total... yaaaaawn...', function (done) {
-			testHelpers.insertTestSound({ name: 'testSound'});
-
-			request
-				.get('/')
-				.expect(function (req) {
-					req.text.should.containEql(comparePrefix +  '1');
-				})
-				.end(done);
-		});
-
-		it('and so on and so ... yaaaaawn ... forth... 4 songs for example... 4 songs in total on the page', function (done) {
-			testHelpers.insertTestSound({ name: 'testSound1'});
-			testHelpers.insertTestSound({ name: 'testSound2'});
-			testHelpers.insertTestSound({ name: 'testSound3'});
-			testHelpers.insertTestSound({ name: 'testSound4'});
-
-			request
-				.get('/')
-				.expect(function (req) {
-					req.text.should.containEql(comparePrefix +  '4');
-				})
-				.end(done);
-		});
-	});
 
 	describe('lists the total number of plays', function () {
 		var comparePrefix = 'id="totalNoPlays">';
@@ -91,6 +56,45 @@ describe('The site for humans', function(){
 				.get('/')
 				.expect(function (req) {
 					req.text.should.containEql(comparePrefix +  '400');
+				})
+				.end(done);
+		});
+	});
+
+	describe('lists the total number of songs', function () {
+
+		var comparePrefix = 'id="totalNoSounds">';
+
+		it('0 sounds in the database gives zero songs....duh!', function (done) {
+			request
+				.get('/')
+				.expect(function (req) {
+					req.text.should.containEql(comparePrefix +  '0');
+				})
+				.end(done);
+		});
+
+		it('1 sound in the database gives 1 in total... yaaaaawn...', function (done) {
+			testHelpers.insertTestSound({ name: 'testSound'});
+
+			request
+				.get('/')
+				.expect(function (req) {
+					req.text.should.containEql(comparePrefix +  '1');
+				})
+				.end(done);
+		});
+
+		it('and so on and so ... yaaaaawn ... forth... 4 songs for example... 4 songs in total on the page', function (done) {
+			testHelpers.insertTestSound({ name: 'testSound1'});
+			testHelpers.insertTestSound({ name: 'testSound2'});
+			testHelpers.insertTestSound({ name: 'testSound3'});
+			testHelpers.insertTestSound({ name: 'testSound4'});
+
+			request
+				.get('/')
+				.expect(function (req) {
+					req.text.should.containEql(comparePrefix +  '4');
 				})
 				.end(done);
 		});

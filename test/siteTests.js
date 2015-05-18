@@ -6,11 +6,13 @@ var request = testHelpers.request;
 describe('The site for humans', function(){
 
   beforeEach(function (done) {
-    testHelpers.removeAllDocs(done);
+    testHelpers.removeAllDocs();
+    done();
   });
 
   afterEach(function (done) {
-    testHelpers.removeAllDocs(done);
+    testHelpers.removeAllDocs();
+    done();
   });
 
   describe('has a disclaimer page that', function () {
@@ -31,32 +33,27 @@ describe('The site for humans', function(){
     });
 
     it('list the sounds in the database', function (done) {
-      co(function *() {
-        testHelpers.seedDb();
+      testHelpers.seedDb();
 
-        request
-          .get('/')
-          .expect(function (req) {
-            req.text.should.containEql("Booooring");
-            req.text.should.containEql("Slave choir");
-            req.text.should.containEql("Slow clapping");
-            req.text.should.containEql("So close");
-          })
-          .end(done);
-      })();
+      request
+        .get('/')
+        .expect(function (req) {
+          req.text.should.containEql("Booooring");
+          req.text.should.containEql("Slave choir");
+          req.text.should.containEql("So close");
+        })
+        .end(done);
     });
 
     it('the list of sounds links to the sound page', function (done) {
-      co(function *() {
-        testHelpers.seedDb();
+      testHelpers.seedDb();
 
-        request
-          .get('/')
-          .expect(function (req) {
-            req.text.should.containEql("href='/sound/" + testHelpers.testSoundName + "'");
-          })
-          .end(done);
-      })();
+      request
+        .get('/')
+        .expect(function (req) {
+          req.text.should.containEql("href='/sound/" + testHelpers.testSoundName + "'");
+        })
+        .end(done);
     });
   });
 
@@ -64,7 +61,8 @@ describe('The site for humans', function(){
     beforeEach(function (done) {
       co(function *() {
         testHelpers.seedDb();
-      })(done);
+        done();
+      });
     });
 
     it('shows up nicely for existing sounds', function (done) {
