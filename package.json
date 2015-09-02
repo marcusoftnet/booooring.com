@@ -8,7 +8,7 @@
     "start": "node --harmony app.js prod",
     "startLocal": "./node_modules/nodemon/bin/nodemon.js --harmony -e html --watch views app.js seed",
     "test:deploy": "npm test -- -R dot",
-    "launch": "open https://kwitansi.herokuapp.com",
+    "launch": "open http://www.booooring.com",
     "push:heroku": "git push heroku master",
     "push:github": "git push --tags origin HEAD:master",
     "push": "npm run push:github && npm run push:heroku",
@@ -25,7 +25,6 @@
     "co": "^4.5.4",
     "mocha": "^2.2.5",
     "nodemon": "^1.3.7",
-    "semver": "^4.3.4",
     "should": "^6.0.1",
     "supertest": "^1.0.1"
   },
