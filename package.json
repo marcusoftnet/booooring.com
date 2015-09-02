@@ -6,7 +6,14 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --harmony-generators -u bdd -R spec",
     "start": "node --harmony app.js prod",
-    "startLocal": "./node_modules/nodemon/bin/nodemon.js --harmony -e html --watch views app.js seed"
+    "startLocal": "./node_modules/nodemon/bin/nodemon.js --harmony -e html --watch views app.js seed",
+
+    "test:deploy": "npm test -- -R dot",
+    "launch": "open https://kwitansi.herokuapp.com",
+    "push:heroku": "git push heroku master",
+    "push:github": "git push --tags origin HEAD:master",
+    "push": "npm run push:github && npm run push:heroku",
+    "deploy:prod": "npm run test:deploy && npm version minor && npm run push && npm run launch"
   },
   "author": "@marcusoftnet",
   "license": "MIT",
